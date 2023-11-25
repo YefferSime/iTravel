@@ -1,6 +1,6 @@
 from django.db import models
 
-class Usuario(models.Model):
+class Usuarios(models.Model):
     uid = models.CharField(max_length=255)
     rol = models.IntegerField()
     foto = models.CharField(max_length=255)
@@ -30,7 +30,7 @@ class Buses(models.Model):
 
 class Boletos(models.Model):
     bus = models.ForeignKey(Buses, on_delete=models.CASCADE, related_name='boletos_bus')
-    usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE, related_name='boletos_usuario')
+    usuario = models.ForeignKey(Usuarios, on_delete=models.CASCADE, related_name='boletos_usuario')
     precio = models.DecimalField(max_digits=10, decimal_places=2)
     fechacompra = models.CharField(max_length=200)
     estado = models.IntegerField()

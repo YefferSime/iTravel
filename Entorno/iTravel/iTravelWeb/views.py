@@ -3,7 +3,7 @@ from .serializers import *
 from rest_framework import viewsets
 
 class UsuarioViewSet(viewsets.ModelViewSet):
-    queryset = Usuario.objects.all()
+    queryset = Usuarios.objects.all()
     serializer_class = UsuarioSerializer
 
 class EmpresasTransporteViewSet(viewsets.ModelViewSet):

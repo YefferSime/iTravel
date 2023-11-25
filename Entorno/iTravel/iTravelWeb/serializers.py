@@ -8,7 +8,7 @@ class EmpresasSerializer(serializers.ModelSerializer):
 
 class UsuarioSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Usuario
+        model = Usuarios
         fields = '__all__'
 
 class RutasSerializer(serializers.ModelSerializer):
