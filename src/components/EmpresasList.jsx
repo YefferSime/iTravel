@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { getAllEmpresas } from '../api/Empresas.api';
+import '../css/EmpresasList.css';
 
 export function EmpresasList() {
     const [empresas, setEmpresas] = useState([]);
@@ -21,13 +22,26 @@ export function EmpresasList() {
     return (
         <div>
             <h1>Lista de Empresas</h1>
-            <ul>
-                {empresas.map((empresa) => (
-                    <li key={empresa.id}>
-                        <strong>{empresa.nombre}</strong> - {empresa.direccion}
-                    </li>
-                ))}
-            </ul>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Direccion</th>
+                        <th>Telefono</th>
+                        <th>Rutas</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {empresas.map((empresa) => (
+                        <tr key={empresa.id}>
+                            <td>{empresa.nombre}</td>
+                            <td>{empresa.direccion}</td>
+                            <td>{empresa.telefono}</td>
+                            <td>{empresa.rutas}</td>
+                        </tr>
+                    ))}
+                </tbody>
+            </table>
         </div>
     );
 }
