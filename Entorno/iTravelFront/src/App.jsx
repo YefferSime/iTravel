@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import EmpresasPages from "./pages/EmpresasPages";
-import EmpresaFormpage from "./pages/EmpresaFormpage";
+import EmpresaFormpage from "./pages/EmpresaFormPages";
 
 function RedirectToEmpresas() {
   return <Navigate to="/empresas" />;
